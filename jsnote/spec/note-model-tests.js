@@ -1,14 +1,19 @@
-function testNoteModel() {
+// function testNoteModel() {
+function testNoteIsNote() {
   var note = new Note();
+  assert.isTrue(note instanceof Note);
+};
 
-    if (!(note instanceof Note)) {
-      throw new Error("note is not a Note!");
-    }
-  }
+function testNoteContainsText() {
+  var note = new Note("My favourite language is JavaScript");
+  assert.isTrue(note.text === "My favourite language is JavaScript");
+};
 
-//   if (note.viewText() !== note.text) {
-//     throw new Error("Circle size is not 10");
-//   }
-// };
-//
-// testCircleRadiusDefaultsTo10();
+function testViewReturnsText() {
+  var note = new Note("My favourite language is JavaScript");
+  assert.isTrue(note.viewText() === "My favourite language is JavaScript");
+};
+
+testNoteIsNote();
+testNoteContainsText();
+testViewReturnsText();
