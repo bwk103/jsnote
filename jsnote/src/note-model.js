@@ -1,16 +1,21 @@
-function Note(text) {
-  this.text = text;
-}
+// function Note(text) {
+//   this.text = text;
+// }
+//
+// Note.prototype.viewText = function() {
+//   return this.text;
+// }
+//
 
-Note.prototype.viewText = function() {
-  return this.text;
-}
+(function(exports) {
+  function Note(text) {
+    this.text = text;
+  }
 
+  Note.prototype.viewText = function() {
+    return this.text;
+  };
 
-// function(exports) {
-//   var text = text
-//   function viewText() {
-//     return text;
-//   };
-//   exports.viewText = viewText;
-// }(this));
+  exports.Note = Note;
+  exports.Note.viewText = Note.viewText;
+})(this);
