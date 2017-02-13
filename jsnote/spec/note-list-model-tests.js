@@ -29,6 +29,7 @@ function testNoteListCreatesNewNotes() {
 
 testNoteListExists();
 testNoteListStoresNotes();
+testNoteListReturnsAllNotes();
 testNoteListCreatesNewNotes();
 
 // function testNoteContainsText() {
