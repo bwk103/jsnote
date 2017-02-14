@@ -6,9 +6,14 @@
 
   NoteListView.prototype.notesToHTML = function() {
     var arrayLength = this.notes.list.length;
-    if (arrayLength === 0) {
-      console.log("You currently have no notes!");
-    }
+    var htmlString = "<ul>";
+    for (var i = 0; i < arrayLength; i++) {
+      htmlString += "<li><div>";
+      htmlString += this.notes.list[i];
+      htmlString += "</div></li>";
+      }
+    htmlString += "</ul>";
+    return htmlString;
   };
 
 
