@@ -1,6 +1,6 @@
 // function testNoteModel() {
-function testNoteIsNote() {
-  var note = new Note();
+function listisList() {
+  var list = new List();
   assert.isTrue(note instanceof Note);
 }
 
@@ -9,11 +9,11 @@ function testNoteContainsText() {
   assert.isTrue(note.text === "My favourite language is JavaScript");
 }
 
-function testViewTextReturnsText() {
+function testViewReturnsText() {
   var note = new Note("My favourite language is JavaScript");
   assert.isTrue(note.viewText() === "My favourite language is JavaScript");
 }
 
 testNoteIsNote();
-testNoteContainsText();
-testViewTextReturnsText();
+// testNoteContainsText();
+// testViewReturnsText();
