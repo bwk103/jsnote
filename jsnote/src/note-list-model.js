@@ -1,14 +1,15 @@
 (function(exports) {
-  function NoteList() {
+  var NoteList = function() {
     this.list = [];
   };
 
   NoteList.prototype.addNote = function(note) {
-    this.list.push(note.text);
+    this.list.push(note);
   };
 
   NoteList.prototype.createNote = function(text) {
-    this.list.push(new Note(text));
+    var note = new Note(text);
+    this.addNote(note);
   };
 
   NoteList.prototype.viewAll = function() {
@@ -16,7 +17,4 @@
   };
 
   exports.NoteList = NoteList;
-  exports.NoteList.addNote = NoteList.addNote;
-  exports.NoteList.createNote = NoteList.createNote;
-  exports.NoteList.viewAll = NoteList.viewAll;
 })(this);

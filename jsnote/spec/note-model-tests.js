@@ -1,4 +1,4 @@
-// function testNoteModel() {
+
 function testNoteIsNote() {
   var note = new Note();
   assert.isTrue(note instanceof Note);

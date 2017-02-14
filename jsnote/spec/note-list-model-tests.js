@@ -4,14 +4,15 @@
 function testNoteListExists() {
   var noteList = new NoteList();
   assert.isTrue(noteList instanceof NoteList);
-};
+}
 
 function testNoteListStoresNotes() {
   var note1 = new Note("hello");
   var noteList = new NoteList();
   noteList.addNote(note1);
-  assert.isTrue(noteList.list.includes("hello"));
-};
+  assert.isTrue(noteList.list.includes(note1));
+  assert.isTrue(noteList.list.length === 1);
+}
 
 function testNoteListReturnsAllNotes() {
   var note1 = new Note("hello");
@@ -19,7 +20,7 @@ function testNoteListReturnsAllNotes() {
   var noteList = new NoteList();
   noteList.addNote(note1);
   assert.isTrue(noteList.viewAll = ["hello", "hi"]);
-};
+}
 
 function testNoteListCreatesNewNotes() {
   var noteList = new NoteList();
