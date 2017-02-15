@@ -15,20 +15,19 @@ function noteControllerStartsWithNoteListView() {
 
 function noteControllerStartsWithNoteListViewWith1Note() {
   var noteController = new NoteController();
-  assert.isTrue(noteController.noteListView.notes.list.length === 0);
+  assert.isTrue(noteController.noteListView.notes.list.length === 1);
 
 }
 
-// function noteControllerChangesText() {
-//   var noteController = new NoteController();
-//   noteController.noteListView.notes.createNote("This is a test");
-//   console.log('')
-//   noteController.changeText();
-//   var element = document.getElementById('app');
-//   console.log(element.innerHTML);
-//   assert.isTrue(element.innerHTML === "This is a test");
-//
-// }
+function noteControllerChangesText() {
+  var noteController = new NoteController();
+  document.getElementById = function(){
+    return {};
+  };
+  noteController.changeText();
+  assert.isTrue(noteController.elem.innerHTML === "<ul><li><div>This is a test</div></li></ul>");
+
+}
 
 noteControllerExists();
 noteControllerStartsWithNoteList();
