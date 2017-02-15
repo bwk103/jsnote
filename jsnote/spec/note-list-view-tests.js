@@ -26,4 +26,4 @@ function takesAListWithMultipleItemAndReturnsHTMLString20chars() {
 noteListViewExists();
 takesANoteListOnInitialization();
 takesAnEmptyListAndReturnsHTMLString();
-takesAListWithMultipleItemAndReturnsHTMLString20chars();
+// takesAListWithMultipleItemAndReturnsHTMLString20chars();

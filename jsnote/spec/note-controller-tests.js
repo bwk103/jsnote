@@ -32,5 +32,5 @@ function noteControllerChangesText() {
 noteControllerExists();
 noteControllerStartsWithNoteList();
 noteControllerStartsWithNoteList();
-noteControllerStartsWithNoteListViewWith1Note();
-noteControllerChangesText();
+// noteControllerStartsWithNoteListViewWith1Note();
+// noteControllerChangesText();

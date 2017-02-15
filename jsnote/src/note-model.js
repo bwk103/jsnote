@@ -3,7 +3,7 @@
     this.text = text;
   };
 
-  Note.prototype.setID = function(id) {
+  Note.prototype.setId = function(id) {
     this.id = id;
   }
 
@@ -11,7 +11,7 @@
     return this.text;
   };
 
-  Note.prototype.getID = function() {
+  Note.prototype.getId = function() {
     return this.id;
   }
 
