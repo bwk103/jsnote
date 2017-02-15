@@ -6,43 +6,19 @@ function testNoteListExists() {
   assert.isTrue(noteList instanceof NoteList);
 }
 
-function testNoteListStoresNotes() {
-  var note1 = new Note("hello");
-  var noteList = new NoteList();
-  noteList.addNote(note1);
-  assert.isTrue(noteList.list.includes(note1));
-  assert.isTrue(noteList.list.length === 1);
-}
-
 function testNoteListReturnsAllNotes() {
-  var note1 = new Note("hello");
-  var note2 = new Note("hi");
   var noteList = new NoteList();
-  noteList.addNote(note1);
+  noteList.addNote("hello");
+  noteList.addNote("hi");
   assert.isTrue(noteList.viewAll = ["hello", "hi"]);
 }
 
 function testNoteListCreatesNewNotes() {
   var noteList = new NoteList();
-  noteList.createNote("hi there");
+  noteList.addNote("hi there");
   assert.isTrue(noteList.viewAll = ["hi there"]);
 }
 
 testNoteListExists();
-testNoteListStoresNotes();
 testNoteListReturnsAllNotes();
 testNoteListCreatesNewNotes();
-
-// function testNoteContainsText() {
-//   var note = new Note("My favourite language is JavaScript");
-//   assert.isTrue(note.text === "My favourite language is JavaScript");
-// };
-//
-// function testViewReturnsText() {
-//   var note = new Note("My favourite language is JavaScript");
-//   assert.isTrue(note.viewText() === "My favourite language is JavaScript");
-// };
-//
-// testNoteIsNote();
-// testNoteContainsText();
-// testViewReturnsText();

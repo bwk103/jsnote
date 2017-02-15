@@ -15,23 +15,15 @@ function takesAnEmptyListAndReturnsHTMLString() {
   assert.isTrue(test.notesToHTML() === "<ul></ul>");
 }
 
-function takesAListWithOneItemAndReturnsHTMLString() {
+function takesAListWithMultipleItemAndReturnsHTMLString20chars() {
   var todo = new NoteList();
-  todo.addNote("Better Understand Javascript");
+  todo.addNote("A-345678901234567890123");
+  todo.addNote("B-345678901234567890123");
   var test = new NoteListView(todo);
-  assert.isTrue(test.notesToHTML() === "<ul><li><div>Better Understand Javascript</div></li></ul>");
-}
-
-function takesAListWithMultipleItemAndReturnsHTMLString() {
-  var todo = new NoteList();
-  todo.addNote("Learn HTML");
-  todo.addNote("Better Understand Javascript");
-  var test = new NoteListView(todo);
-  assert.isTrue(test.notesToHTML() === "<ul><li><div>Learn HTML</div></li><li><div>Better Understand Javascript</div></li></ul>");
+  assert.isTrue(test.notesToHTML() === "<ul><li><div>A-345678901234567890</div></li><li><div>B-345678901234567890</div></li></ul>");
 }
 
 noteListViewExists();
 takesANoteListOnInitialization();
-takesAListWithOneItemAndReturnsHTMLString();
 takesAnEmptyListAndReturnsHTMLString();
-takesAListWithMultipleItemAndReturnsHTMLString();
+takesAListWithMultipleItemAndReturnsHTMLString20chars();

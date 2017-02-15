@@ -9,7 +9,7 @@
     var htmlString = "<ul>";
     for (var i = 0; i < arrayLength; i++) {
       htmlString += "<li><div>";
-      htmlString += this.notes.list[i].viewText();
+      htmlString += this.notes.list[i].viewText().substr(0,20);
       htmlString += "</div></li>";
       }
     htmlString += "</ul>";
