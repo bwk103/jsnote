@@ -19,6 +19,13 @@ function testNoteListCreatesNewNotes() {
   assert.isTrue(noteList.viewAll = ["hi there"]);
 }
 
+function testNoteID() {
+  var noteList = new NoteList();
+  noteList.addNote("hello world");
+  assert.isTrue(noteList.viewAll()[0].getID() == 0);
+}
+
 testNoteListExists();
 testNoteListReturnsAllNotes();
 testNoteListCreatesNewNotes();
+testNoteID();
