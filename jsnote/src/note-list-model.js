@@ -3,13 +3,9 @@
     this.list = [];
   };
 
-  NoteList.prototype.addNote = function(note) {
-    this.list.push(note);
-  };
-
-  NoteList.prototype.createNote = function(text) {
+  NoteList.prototype.addNote = function(text) {
     var note = new Note(text);
-    this.addNote(note);
+    this.list.push(note);
   };
 
   NoteList.prototype.viewAll = function() {
