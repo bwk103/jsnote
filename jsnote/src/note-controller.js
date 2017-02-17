@@ -20,12 +20,26 @@
     window.addEventListener("hashchange", this.showNoteForCurrentPage);
   }
 
-  function showNoteForCurrentPage(){
-    this.location = window.location.href ;
-    var id = this.location.hash.split("#")[1];
-    var noteHtml = "ARGGGGH!";
-    document.getElementById("app").innerHTML = noteHtml;
+  function showNoteForCurrentPage() {
+        showNote(getNoteFromUrl(window.location));
   }
+
+  function getNoteFromUrl(location) {
+    return location.hash.split("#notes/")[1];
+  }
+
+  function showNote(id) {
+    console.log(id)
+    document.getElementById("app").innerHTML = noteList.list[id].viewText();
+  }
+
+  // function showNoteForCurrentPage(){
+  //   this.location = window.location.href ;
+  //   var id = this.location.hash.split("#")[1];
+  //   console.log(this.noteListView)
+  //   var noteHtml = "ARGGGGH!";
+  //   document.getElementById("app").innerHTML = noteHtml;
+  // }
 
   // function showNote(id) {
   //   var noteHtml = "ARRRRRRGH!";

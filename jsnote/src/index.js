@@ -1,5 +1,5 @@
 window.onload = (function(){
-  var noteList = new NoteList();
+  noteList = new NoteList();
   noteList.addNote("This is a test"); // delete this!
   noteList.addNote("Hello, World!");
   noteList.addNote("Will this work?");
