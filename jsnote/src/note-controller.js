@@ -36,6 +36,8 @@
   function checkWhetherFormSubmitted() {
     var form = document.getElementById('text');
     form.addEventListener("submit", function() {
+      var text = document.getElementById("textarea");
+      console.log(text.value);
       console.log("You clicked it!!");
       preventDef();
     });
