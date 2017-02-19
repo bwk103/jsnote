@@ -8,6 +8,7 @@
     var note = new Note(text);
     this.list.push(note);
     note.setId(this.nextId());
+    this.viewAll();
   };
 
   NoteList.prototype.nextId = function() {

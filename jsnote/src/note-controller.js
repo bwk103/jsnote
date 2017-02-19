@@ -37,6 +37,8 @@
     var form = document.getElementById('text');
     form.addEventListener("submit", function() {
       var text = document.getElementById("textarea");
+      noteList.addNote(text.value);
+      controller.changeText();
       console.log(text.value);
       console.log("You clicked it!!");
       preventDef();
