@@ -9,7 +9,7 @@
     var htmlString = "<ul>";
     for (var i = 0; i < arrayLength; i++) {
       htmlString += "<li><div>";
-      htmlString += "<a href='#";
+      htmlString += "<a href='#notes/";
       htmlString += this.notes.list[i].getId();
       htmlString += "'>";
       htmlString += this.notes.list[i].viewText().substr(0,20);

@@ -13,7 +13,7 @@
   NoteList.prototype.nextId = function() {
     this.id++;
     return this.id;
-  }
+  };
 
   NoteList.prototype.viewAll = function() {
     return this.list;
@@ -25,7 +25,7 @@
         return this.list[i];
       }
     }
-  }
+  };
 
   exports.NoteList = NoteList;
 })(this);

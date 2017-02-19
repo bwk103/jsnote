@@ -1,13 +1,11 @@
-$( document ).ready(function() {
-
-  var showNoteForCurrentPage = function() {
-    var location = window.location.href ;
-    var id = location.split("#")[1];
-    var noteHtml = noteController.noteListView.notes.getNoteById(id).viewText();
-    document.getElementById("app").innerHTML = noteHtml;
-  };
-
-  var noteController = new NoteController();
-  noteController.changeText();
-  window.addEventListener("hashchange", showNoteForCurrentPage);
+window.onload = (function(){
+  noteList = new NoteList();
+  noteList.addNote("This is a test"); // delete this!
+  noteList.addNote("Hello, World!");
+  noteList.addNote("Will this work?");
+  noteList.addNote("Here's another test!");
+  var noteListView = new NoteListView(this.noteList);
+  controller = new NoteController(noteListView);
+  controller.changeText();
+  changeUrlForSingleNote();
 });
