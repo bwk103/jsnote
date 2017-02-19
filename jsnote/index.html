@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Note-Keeper</title>
-    <form id='text' action='/index' method='post'>
-      <textarea rows='10' cols='500'>
-        Write your note here....
-      </textarea>
-      <input type='submit' value='Add Note' />
     </form>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src='src/note-model.js'></script>
@@ -22,8 +17,12 @@
     <script src='src/index.js'></script>
   </head>
   <body>
+    <form id='text' action='/index' method='post'>
+      <textarea rows='10' cols='500'>
+        Write your note here....
+      </textarea>
+      <input type='submit' onclick="addHandler();" value='Add Note' />
     <div id="app">
-      Hello
     </div>
   </body>
 </html>

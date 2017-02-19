@@ -8,4 +8,5 @@ window.onload = (function(){
   controller = new NoteController(noteListView);
   controller.changeText();
   changeUrlForSingleNote();
+  checkWhetherFormSubmitted();
 });

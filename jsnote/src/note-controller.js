@@ -29,9 +29,27 @@
   }
 
   function showNote(id) {
-    console.log(id)
+    console.log(id);
     document.getElementById("app").innerHTML = noteList.list[id].viewText();
   }
+
+  function checkWhetherFormSubmitted() {
+    var form = document.getElementById('text');
+    form.addEventListener("submit", function() {
+      console.log("You clicked it!!");
+      preventDef();
+    });
+  }
+
+  function preventDef(){
+    event.preventDefault();
+  }
+
+  function addHandler() {
+    var form = document.getElementById('text');
+    form.addEventListener("submit",
+    preventDef, false);
+}
 
   // function showNoteForCurrentPage(){
   //   this.location = window.location.href ;
